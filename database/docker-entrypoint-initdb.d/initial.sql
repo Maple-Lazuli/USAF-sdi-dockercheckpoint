@@ -1,0 +1,1 @@
+CREATE TABLE emails (id serial PRIMARY KEY, sender VARCHAR(320), recipient VARCHAR(320), subject TEXT, message TEXT, date TEXT); 

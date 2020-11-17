@@ -1,0 +1,16 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    volumes: /docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: sdi_databases_checkpoint
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
